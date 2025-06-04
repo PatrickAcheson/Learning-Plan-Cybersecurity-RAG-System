@@ -21,6 +21,7 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - Hugging Face [NLP Course](https://huggingface.co/learn/nlp-course/chapter1)
 - "Transformer Language Model" [Link](https://www.youtube.com/watch?v=-QH8fRhqFHM)
 - “Retrieval-Augmented Generation Explained” [RAG Video](https://youtu.be/5Y3a61o0jFQ?feature=shared)
+- Basic RAG: [link](https://docs.mistral.ai/guides/rag/)
 
 ---
 
