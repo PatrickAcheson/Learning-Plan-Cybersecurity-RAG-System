@@ -11,6 +11,7 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 **Goals:**
 - Understand what LLMs are and how they work
 - Learn about basics of transformers, embeddings, and RAG basics
+- Find what llm can run on cpu
 
 **Topics:**
 - What are LLMs? (GPT, Mistral, LLaMA)
