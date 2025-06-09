@@ -31,6 +31,16 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - Basic RAG: [link](https://docs.mistral.ai/guides/rag/)
 
 ---
+## Week 2 - Pratical creation of Vectors
+
+**Goals:**
+- 
+
+**Topics:**
+
+- Complete tasks on the github repo
+- Install juptiar note book (.ipynb)
+
 
 ...**more to be added here**
 
