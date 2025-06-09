@@ -22,7 +22,7 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - Git & GitHub	Version control for your project repo	GitHub Docs > Hello World
 - Python Basics	All glue code, APIs, and scripts will be in Python	> w3schools Python or RealPython
 - Virtual Environments	> Keep packages clean for Python projects	python -m venv tutorial or RealPython guide
-- Using APIs (REST)	Understand how FastAPI and HTTP requests work	> Intro to APIs or FastAPI crash course
+- Using APIs (REST)	Understand how FastAPI and HTTP requests work	> Intro to APIs or FastAPI crash course ([link](https://documenter.getpostman.com/view/664302/S1ENwy59))
 - What is JSON?	Work with ticket data and APIs	> JSON Crash Course
 
 **Resources:**
