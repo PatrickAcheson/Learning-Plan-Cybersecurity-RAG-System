@@ -17,7 +17,8 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - What are LLMs? (GPT, Mistral, LLaMA)
 - Tokenization and embeddings
 - What is RAG and why it matters in InfoSec
-
+  
+**Other things to learn basic of**
 - Git & GitHub	Version control for your project repo	GitHub Docs > Hello World
 - Python Basics	All glue code, APIs, and scripts will be in Python	> w3schools Python or RealPython
 - Virtual Environments	> Keep packages clean for Python projects	python -m venv tutorial or RealPython guide
@@ -33,14 +34,20 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 ---
 ## Week 2 - Pratical creation of Vectors
 
+### Monday - Tuesday (not hard deadline)
+
 **Goals:**
-- 
+- Finish HuggingFace Course and Watch Intro videos for above.
+- Complete RAG course using (wine data first, then security one).
+- Create persistant vector store (no using in memory) & Find method of visualising the vector store
 
-**Topics:**
-
-- Complete tasks on the github repo
-- Install juptiar note book (.ipynb)
-
+Tasks
+- Install Github desktop
+- Initialise Repo with (.gitignore)
+- Install Juypter notebook, and git clone course ( [link](https://github.com/alfredodeza/learn-retrieval-augmented-generation/tree/main)) **note** add your own LLM into the part that talks about APIs
+- Work through Juypter notebooks and comment them (make commits often)
+- Use dataset and vectorise the sample security tickets and do some testing. [link](https://github.com/PatrickAcheson/Learning-Plan-Cybersecurity-RAG-System/blob/main/Ticket%20Details.xlsx)
+- Visualise the vectorstore
 
 ...**more to be added here**
 
