@@ -48,7 +48,7 @@ Tasks
 - Install Juypter notebook, and git clone course ( [link](https://github.com/alfredodeza/learn-retrieval-augmented-generation/tree/main)) **note** add your own LLM into the part that talks about APIs
 - Work through Juypter notebooks and comment them (make commits often)
 - Use dataset and vectorise the sample security tickets and do some testing. [link](https://github.com/PatrickAcheson/Learning-Plan-Cybersecurity-RAG-System/blob/main/Ticket%20Details.xlsx)
-- Visualise the vectorstore
+- Visualise the vectorstore [link](https://medium.com/@sarmadafzalj/visualize-vector-embeddings-in-a-rag-system-89d0c44a3be4)
 
 ...**more to be added here**
 
