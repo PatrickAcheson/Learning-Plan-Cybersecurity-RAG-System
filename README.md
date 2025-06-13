@@ -41,7 +41,7 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - Complete RAG course using (wine data first, then security one).
 - Create persistant vector store (no using in memory) & Find method of visualising the vector store
 
-Tasks
+**Tasks**
 - Install Github desktop
 - Create virtual enviroment (example. python -m venv myenv)
 - Initialise Repo with (.gitignore)
@@ -49,6 +49,27 @@ Tasks
 - Work through Juypter notebooks and comment them (make commits often)
 - Use dataset and vectorise the sample security tickets and do some testing. [link](https://github.com/PatrickAcheson/Learning-Plan-Cybersecurity-RAG-System/blob/main/Ticket%20Details.xlsx)
 - Visualise the vectorstore [link](https://medium.com/@sarmadafzalj/visualize-vector-embeddings-in-a-rag-system-89d0c44a3be4)
+
+**Extra**
+Gather theat intelligence and vuln data from free APIs, efficently add new data to a new collection or vector
+  - NVD API [link](https://nvd.nist.gov/developers/vulnerabilities)
+  - CVE API by CIRCL [link](https://cve.circl.lu/api/)
+  - CISA KEV Catalog [link](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+  - GreyNoise [link](https://docs.greynoise.io/reference/get_v3-community-ip)
+What to vectorize:
+  -CVE ID, description, CVSS score
+  -Affected vendors/products
+  -Attack vector, privileges required, impact
+  - Fix status / remediation
+  - CISA "known exploited" tag
+
+Attempt to enrich results or find details and steps to mitigation for CVE identified in ticket data.
+
+**Harder**
+Attempt to create actions with the LLM, where key works or arguments for example (/search-software) creates a call to an API and brings results into LLM context window (or vectorizes it)
+  - Virus Total API [link](https://docs.virustotal.com/reference/overview)
+  - Hybrid Analysis [link](https://www.hybrid-analysis.com/docs/api/v2)
+
 
 ...**more to be added here**
 
