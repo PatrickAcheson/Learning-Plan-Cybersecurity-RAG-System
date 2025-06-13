@@ -51,6 +51,7 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 - Visualise the vectorstore [link](https://medium.com/@sarmadafzalj/visualize-vector-embeddings-in-a-rag-system-89d0c44a3be4)
 
 **Extra**
+
 Gather theat intelligence and vuln data from free APIs, efficently add new data to a new collection or vector
   - NVD API [link](https://nvd.nist.gov/developers/vulnerabilities)
   - CVE API by CIRCL [link](https://cve.circl.lu/api/)
