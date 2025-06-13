@@ -57,10 +57,11 @@ Gather theat intelligence and vuln data from free APIs, efficently add new data 
   - CVE API by CIRCL [link](https://cve.circl.lu/api/)
   - CISA KEV Catalog [link](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
   - GreyNoise [link](https://docs.greynoise.io/reference/get_v3-community-ip)
+    
 What to vectorize:
-  -CVE ID, description, CVSS score
-  -Affected vendors/products
-  -Attack vector, privileges required, impact
+  - CVE ID, description, CVSS score
+  - Affected vendors/products
+  - Attack vector, privileges required, impact
   - Fix status / remediation
   - CISA "known exploited" tag
 
