@@ -52,6 +52,10 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 
 **Extra**
 
+1. Comment codebase and explain decisions made during design changes.
+2. Build clean CLI chat back and forward.
+3. Start beblow tasks (goal here is that he user could ask about a CVE and it could either find the vector that has the CVE make API call command:
+
 Gather theat intelligence and vuln data from free APIs, efficently add new data to a new collection or vector
   - NVD API [link](https://nvd.nist.gov/developers/vulnerabilities)
   - CVE API by CIRCL [link](https://cve.circl.lu/api/)
