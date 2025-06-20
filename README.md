@@ -56,6 +56,9 @@ This plan will outline a 9-week structured mentorship plan for an introduction t
 2. Build clean CLI chat back and forward.
 3. Start beblow tasks (goal here is that he user could ask about a CVE and it could either find the vector that has the CVE make API call command:
 
+
+================================================================================================================
+
 Gather theat intelligence and vuln data from free APIs, efficently add new data to a new collection or vector
   - NVD API [link](https://nvd.nist.gov/developers/vulnerabilities)
   - CVE API by CIRCL [link](https://cve.circl.lu/api/)
@@ -69,8 +72,9 @@ What to vectorize:
   - Fix status / remediation
   - CISA "known exploited" tag
 
-Attempt to enrich results or find details and steps to mitigation for CVE identified in ticket data.
+### Attempt to enrich results or find details and steps to mitigation for CVE identified in ticket data.
 
+- seperate api data collection in scheduled process. (cron job every 4 hours)
 - token streaming?
 
 **Harder**
