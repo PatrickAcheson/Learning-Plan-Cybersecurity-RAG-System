@@ -71,6 +71,8 @@ What to vectorize:
 
 Attempt to enrich results or find details and steps to mitigation for CVE identified in ticket data.
 
+- token streaming?
+
 **Harder**
 Attempt to create actions with the LLM, where key works or arguments for example (/search-software) creates a call to an API and brings results into LLM context window (or vectorizes it)
   - Virus Total API [link](https://docs.virustotal.com/reference/overview)
