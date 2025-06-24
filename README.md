@@ -111,7 +111,7 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
    * Implement retries, rate-limit handling, and log to SQLite
 4. **UX Prep**
 
-   * Sketch wireframes for future GUI tabs (Chat, Admin)
+   * Sketch wireframes for future GUI tabs (Chat, Admin) .ie [MIRO](https://miro.com/app/)
    * Draft JSON schemas for model config and user roles
 
 ---
