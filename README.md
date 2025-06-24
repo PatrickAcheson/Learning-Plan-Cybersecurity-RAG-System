@@ -1,5 +1,5 @@
 
-# Intern Plan: Cybersecurity RAG System using LLMs & Embeddings (4-Week Sprint)
+# Intern Plan: Cybersecurity RAG System using LLMs & Embeddings
 
 This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, RBAC, and model selection—optimized for a single-PC, internal setup.
 
