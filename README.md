@@ -101,7 +101,7 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
 
 1. **Automated Data Ingestion**
 
-   * Scripts to pull from NVD, CIRCL, CISA KEV, GreyNoise APIs every 4 hours (cron)
+   * Scripts to pull from [NVD](https://nvd.nist.gov/developers/vulnerabilities), [CIRCL](https://cve.circl.lu/api/), CISA KEV, GreyNoise APIs every 4 hours ([cron](https://cronitor.io/guides/python-cron-jobs))
 2. **Slash-Command Actions**
 
    * Define commands (e.g., `/search-cve CVE-2021-1234`)
