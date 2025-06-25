@@ -116,41 +116,54 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
 
 ---
 
-## Week 4 – Gradio GUI with RBAC & Model Selection
+## Week 4 – Test & Choose: Gradio vs. Streamlit GUI with RBAC & Model Selection
 
 **Goals:**
-
-* Rapidly deploy an internal web interface using Gradio
-* Implement lightweight RBAC and model switching
+- Spin up both Gradio and Streamlit versions of your RAG interface  
+- Compare ease-of-use, feature support, and performance  
+- Decide on the best framework for ongoing development  
 
 **Tasks:**
 
-1. **Basic Gradio App**
+1. **Prototype A – Gradio**  
+   - `pip install gradio`  
+   - Build a chat + model-selector UI:  
+     - Chat input/output tied to your RAG backend  
+     - Dropdown for LLMs (GPT-3.5, Mistral, LLaMA) sourced from JSON/YAML  
+   - Implement lightweight RBAC:  
+     - SQLite “users” table + simple login prompt  
+     - Hide “Admin” tab unless `role == "admin"`  
+   - Use Gradio’s `Tabs` for **Chat** vs. **Admin**, and `Dataframe` for vector-store stats  
+   - Run on `localhost:7860` (optionally bind `0.0.0.0` for LAN)  
 
-   * `pip install gradio`
-   * Build a chat interface that calls your RAG prototype
-2. **Model-Selection Dropdown**
+2. **Prototype B – Streamlit**  
+   - `pip install streamlit`  
+   - Create a Streamlit app with:  
+     - Text input for chat, output area for model replies  
+     - `st.selectbox` for model selection (same JSON/YAML config)  
+   - Add RBAC:  
+     - On first run, prompt for credentials via `st.sidebar` form  
+     - Store session state role; show an “Admin” section only if `role == "admin"`  
+   - Use Streamlit layout primitives (`st.tabs`, `st.sidebar`) to separate Chat/Admin  
+   - Display vector-store stats via `st.dataframe` and any required plots  
 
-   * Read available LLMs (GPT-3.5, Mistral, LLaMA) from a JSON/YAML config
-   * On dropdown change, switch the backend client
-3. **Lightweight RBAC**
+3. **Compare & Evaluate**  
+   - **Setup time**: how quickly did each prototype go from zero to chat?  
+   - **Feature fit**: ease of dropdown, tabs, dataframes, streaming outputs  
+   - **Customization**: flexibility of theming and layout  
+   - **Performance**: responsiveness under typical query load  
+   - **Deployment simplicity**: one-command launch, port binding, dependency footprint  
 
-   * Store users/roles in SQLite
-   * Prompt for login on app start; only show “Admin” tab if `role == "admin"`
-4. **Tabs & Stats**
-
-   * Use Gradio’s `Tabs` for **Chat** (all users) vs. **Admin** (model config, index rebuild)
-   * Display vector-store stats in a Gradio `Dataframe` component
-5. **Styling & Deployment**
-
-   * Apply custom CSS or Gradio theme overrides
-   * Run on `localhost:7860`
-   * Once reviewed by me try (bind to `0.0.0.0` for LAN if desired)
+4. **Decision & Next Steps**  
+   - Document your findings in a short table or bullet list in the repo README  
+   - Agree on the framework to continue with for full integration  
+   - Archive or remove the unused prototype  
 
 **Resources:**
-
-* Gradio docs: [https://gradio.app/get\_started](https://www.gradio.app/guides/quickstart)
-* FastAPI integration: [https://gradio.app/docs/#fastapi-integration](https://www.gradio.app/guides/quickstart/docs/#fastapi-integration)
+- Gradio Quickstart: https://gradio.app/get_started  
+- Gradio + FastAPI: https://gradio.app/docs/#fastapi-integration  
+- Streamlit Docs: https://docs.streamlit.io  
+- Streamlit Authentication Patterns: https://discuss.streamlit.io/t/basic-authentication-patterns/6593  
 
 **More to come here**
 
