@@ -180,7 +180,6 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
 
 2. **Policy Helper Agent**  
    - Under **Knowledge**, upload 2–3 policy PDF documents (e.g. security standards, incident response playbooks)  
-   - Configure ingestion settings (chunk size, overlap) and run the indexing job  
    - In **Topics**, define example prompts like “What is our data retention policy?”  
    - Test in the **Chat** view, refine prompts until the agent reliably cites page/section  
 
