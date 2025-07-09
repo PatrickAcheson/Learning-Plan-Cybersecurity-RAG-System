@@ -165,7 +165,97 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
 - Streamlit Docs: https://docs.streamlit.io  
 - Streamlit Authentication Patterns: https://discuss.streamlit.io/t/basic-authentication-patterns/6593  
 
-**More to come here**
+## Week 5 – Microsoft Copilot Studio Hands-On
+
+**Goals:**
+- Develop understanding of Copilot Studio’s Agents, Knowledge, Tools, and Topics  
+- Build two sample agents: a “Policy Helper” (PDF-based) and a “Patch Tuesday CVE Advisor”  
+- Learn to manage knowledge ingestion and agent configuration  
+
+**Tasks:**
+1. **Agent Creation & Overview**  
+   - In Copilot Studio, go to **Agents → Create** and scaffold a new agent  
+   - Compare the Agent settings tabs (**Overview**, **Knowledge**, **Tools**, **Agents**, **Topics**, **Activity**, **Analytics**, **Channels**)  
+   - Note where to configure system prompts, security roles, and access  
+
+2. **Policy Helper Agent**  
+   - Under **Knowledge**, upload 2–3 policy PDF documents (e.g. security standards, incident response playbooks)  
+   - Configure ingestion settings (chunk size, overlap) and run the indexing job  
+   - In **Topics**, define example prompts like “What is our data retention policy?”  
+   - Test in the **Chat** view, refine prompts until the agent reliably cites page/section  
+
+3. **Patch Tuesday CVE Advisor**  
+   - Create an agent focused on monthly CVE advisories  
+   - Upload a sample MSRC PDF or CVRF XML under **Knowledge**, plus any additional advisory docs  
+   - Under **Tools**, register your Week 6 CVRF wrapper function (or Azure Function endpoint) as a callable tool  
+   - In **Topics**, add slash-commands (e.g. `/list-patch-tuesday`) and map them to tool calls  
+   - Test end-to-end: invoke the agent, have it fetch the latest advisories, and summarize key CVEs  
+
+4. **Refine & Secure**  
+   - Use the **Activity** and **Analytics** tabs to review usage logs and common unanswered questions  
+   - Play around with the agent’s system prompt (in **Overview**) to improve context framing (“You are an InfoSec analyst…”)  
+
+**Resources:**
+- Copilot Studio docs: https://docs.microsoft.com/copilot-studio  
+- PDF ingestion guide: https://docs.microsoft.com/copilot-studio/knowledge  
+- Agent Topics & Tools: https://docs.microsoft.com/copilot-studio/agents-overview  
+
+
+## Week 6 – Copilot Studio: CVRF Wrapper & Multi-Source CVE Tool
+
+**Goals:**
+- Recreate and extend the MSRC CVRF client script within Copilot Studio  
+- Build a functional Copilot “tool” that searches public CVE releases across multiple sources  
+
+**Tasks:**
+1. **Reimplement `cvrf_client.py`**  
+   - Fetch the original script from:  
+     ```
+     https://raw.githubusercontent.com/PatrickAcheson/msrc_cvrf_wrapper/refs/heads/main/cvrf_client.py
+     ```  
+   - Import it into Copilot Studio as a new “tool integration.”  
+2. **Overhaul & Modularize**  
+   - Refactor into clear functions: `fetch_msrc()`, `fetch_nvd()`, `fetch_circl()`, etc.  
+   - Consolidate common HTTP/auth code into a shared helper.  
+3. **Add Additional CVE Sources**  
+   - Hook in NVD, CIRCL, CISA KEV, GreyNoise as separate tool endpoints or library modules.  
+4. **Multi-Tab Interface**  
+   - Define a slash-command or UI tabs in your custom Copilot:  
+     - **MSRC**  
+     - **NVD**  
+     - **CIRCL**  
+     - **CISA-KEV**  
+     - **GreyNoise**  
+   - Ensure each tab/tool returns the top 5 results and key metadata.  
+
+---
+
+## Week 7 – Streamlit Prototype & Search Functionality
+
+**Goals:**
+- Finish the internal RAG/LLM Streamlit wrapper  
+- Integrate the CVE search functionality from Week 6 into the UI  
+
+**Tasks:**
+1. **Streamlit Finalization**  
+   - Continue building out your chosen Streamlit app (from Week 4 comparison)  
+   - Refactor code to make adding new information sources trivial (e.g. via a `sources.yaml` config)  
+2. **Integrate Search Tools**  
+   - Embed the CVRF & multi-source CVE tool into Streamlit:  
+     - Add a sidebar `selectbox` or `st.tabs` for each CVE source  
+     - On selection, call the corresponding Python function (from Week 6) and display results  
+3. **Ease of Extension**  
+   - Abstract the search logic so new APIs can be added by dropping in a new module and updating `sources.yaml`  
+   - Document your code bbase
+4. **UI Polish & UX**  
+   - Add clear loading indicators and error messages  
+   - Use `st.dataframe` or `st.table` to render CVE results with sortable columns  
+5. **Demo & Handoff**  
+   - Prepare a short walkthrough script covering:  
+     - RAG chat usage  
+     - Model switching  
+     - CVE search across multiple tabs 
+
 
 ```
 ```
