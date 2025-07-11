@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select CVEs</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+  <div class="select-container">
+    <h2>Select Vulnerabilities</h2>
+    <form method="post" id="selectForm">
+      <div class="lists">
+        <div class="list" id="available">
+          <h3>Available</h3>
+          <ul>
+            {% for i in items %}
+            <li data-cve="{{ i.cve }}">
+              <div class="info">
+                <a href="{{ i.link }}" target="_blank">{{ i.cve }}</a> – {{ i.title }}
+              </div>
+              {% if i.remediation %}
+              <div class="remed">
+                <a href="{{ i.remediation }}" target="_blank">Remediation</a>
+              </div>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="list" id="selected">
+          <h3>Selected</h3>
+          <ul></ul>
+        </div>
+      </div>
+      <input type="hidden" name="selected" id="selectedInput">
+      <button type="submit">Export CSV</button>
+    </form>
+  </div>
+  <script>
+    new Sortable(document.getElementById('available').querySelector('ul'),{
+      group:'vulns',animation:150
+    });
+    new Sortable(document.getElementById('selected').querySelector('ul'),{
+      group:'vulns',animation:150,
+      onAdd:()=>{
+        const vals=[...document.querySelectorAll('#selected li')].map(li=>li.dataset.cve);
+        document.getElementById('selectedInput').value=vals;
+      }
+    });
+  </script>
+</body>
+</html>
