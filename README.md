@@ -233,9 +233,10 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
 
 **Goals:**
 - Finish the internal RAG/LLM Streamlit wrapper  
-- Integrate the CVE search functionality from Week 6 into the UI  
+- Integrate the CVE search functionality from Week 6 into the UI
+- Gather requirments and finalise front-end for Microsoft Patch Tuesday (Task set 2)
 
-**Tasks:**
+**Task set 1**
 1. **Streamlit Finalization**  
    - Continue building out your chosen Streamlit app (from Week 4 comparison)  
    - Refactor code to make adding new information sources trivial (e.g. via a `sources.yaml` config)  
@@ -255,6 +256,7 @@ This condensed 4-week sprint covers the essentials of RAG, vector stores, GUI, R
      - Model switching  
      - CVE search across multiple tabs 
 
-
+**Task set 2**
+1. **Streamlit Finalization** 
 ```
 ```
